@@ -1,4 +1,4 @@
-const async_hooks = require('async_hooks');
+import async_hooks from 'async_hooks';
 
 class Context {
     static contexts = new Map();
@@ -28,13 +28,11 @@ class Context {
 
     static getContext() {
         const noopContext = () => {
-            // console.log('POOF...');
             console.log('💥 No Context Found!...');
             return null;
         }
         const contextNotFound = () => {
-            // throw new Error("💥 No Context Found!...")
-            return {get: noopContext}
+            return { get: noopContext }
         }
         const asyncId = async_hooks.executionAsyncId();
         return this.contexts.get(asyncId) || contextNotFound();
@@ -42,7 +40,7 @@ class Context {
 
     containerWithContext(handler) {
         const context = this;
-        return function(...args) {
+        return (...args) => {
             const asyncId = async_hooks.executionAsyncId();
             Context.contexts.set(asyncId, context);
             try {
@@ -57,4 +55,5 @@ class Context {
     }
 }
 
-module.exports = Context;
+export default Context;
+
