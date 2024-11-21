@@ -55,7 +55,6 @@ const commandHandler = (command) => {
 
 rl.on('line', commandHandler);
 
-// Call the debug method on the Context class without interval
 // commands:
 // create sampleContext --> ID: 18
 // bind key value 18

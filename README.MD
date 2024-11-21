@@ -72,3 +72,24 @@ Context.bind: 0.845 ms, 1000 iterations, 1183431.95 ops, Total Memory: 43998.81 
 Context.get: 0.253 ms, 1000 iterations, 3955696.20 ops, Total Memory: 44259.15 KB
 Context.unbind: 0.342 ms, 1000 iterations, 2924831.82 ops, Total Memory: 44528.48 KB
 ```
+
+## Debugging
+
+- **Monitor Contexts**:
+`node debug.js`
+
+```
+Commands:
+
+1. create sampleContext --> ID: 18
+2. bind key value 18
+3. get all
+4. get 18
+```
+
+
+
+
+
+
+
