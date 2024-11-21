@@ -1,6 +1,6 @@
 {
   "name": "the-context-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This project demonstrates a simple context management system using JavaScript. It allows you to create contexts, bind values to keys within those contexts, and retrieve those values within a handler function.",
   "main": "main.js",
   "dependencies": {},
