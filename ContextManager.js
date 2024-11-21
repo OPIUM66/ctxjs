@@ -3,12 +3,13 @@ import async_hooks from 'async_hooks';
 class Context {
     static contexts = new Map();
 
-    constructor() {
+    constructor(name) {
         this.data = new Map();
+        this.name = name; // Store context name
     }
 
-    static createContext() {
-        const context = new Context();
+    static createContext(name) {
+        const context = new Context(name);
         const asyncId = async_hooks.executionAsyncId();
         this.contexts.set(asyncId, context);
         return context;
@@ -38,6 +39,18 @@ class Context {
         return this.contexts.get(asyncId) || contextNotFound();
     }
 
+    static getAllContexts() {
+        return Array.from(this.contexts.entries()).map(([asyncId, context]) => ({
+            asyncId,
+            name: context.name,
+            data: Array.from(context.data.entries())
+        }));
+    }
+
+    static getContextById(asyncId) {
+        return this.contexts.get(asyncId);
+    }
+
     containerWithContext(handler) {
         const context = this;
         return (...args) => {
@@ -53,7 +66,13 @@ class Context {
             }
         };
     }
+
+    static debug() {
+        console.log('Current Contexts:', this.contexts.size);
+        for (const [asyncId, context] of this.contexts.entries()) {
+            console.log(`Async ID: ${asyncId}, Name: ${context.name}, Data:`, Array.from(context.data.entries()));
+        }
+    }
 }
 
 export default Context;
-
