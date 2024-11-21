@@ -1,0 +1,19 @@
+{
+  "name": "ctxjs",
+  "version": "1.0.0",
+  "description": "This project demonstrates a simple context management system using JavaScript. It allows you to create contexts, bind values to keys within those contexts, and retrieve those values within a handler function.",
+  "main": "main.js",
+  "dependencies": {
+    "benchmark": "^2.1.4",
+    "lodash": "^4.17.21",
+    "platform": "^1.3.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "debug": "node debug.js",
+    "benchmark": "node benchmark.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
