@@ -4,12 +4,11 @@ node_modules/
 # Ignore build directory
 build/
 
-# Ignore tests directory
-tests/
-
 # Ignore .gitignore file
 .gitignore
+.npmignore
 
 # Ignore log files
 *.log
 
+package-lock.json
