@@ -12,7 +12,7 @@
     "debug": "node ./tests/debug.js",
     "benchmark": "node ./tests/benchmark.js"
   },
-  "keywords": [],
+  "keywords": ["context-manager" , "ctx", "ctxjs", "ctxjs-context-manager", "create-context", "Context Manager", "javascript" , "js", "context" , "javascript context manager"],
   "author": "opium66",
   "license": "MIT"
 }
