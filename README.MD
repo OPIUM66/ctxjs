@@ -16,9 +16,9 @@ The main components of this example are:
 0. **Import the Context Module**:
 
     ```javascript
-        import Context from 'the-context-js';
-        // OR ||
-        const { default: Context } = require("the-context-js");
+    import Context from 'the-context-js';
+    // OR ||
+    const { default: Context } = require("the-context-js");
     ```
 
 1. **Create a Context**: Use `Context.createContext()` to create a new context instance.
