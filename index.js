@@ -1,1 +1,1 @@
-export default './lib/contextManager'
+export { default } from './lib/contextManager.js';
