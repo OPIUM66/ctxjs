@@ -1,7 +1,7 @@
 {
   "name": "the-context-js",
-  "version": "1.0.8",
-  "description": "This project demonstrates a simple context management system using JavaScript. It allows you to create contexts, bind values to keys within those contexts, and retrieve those values within a handler function.",
+  "version": "1.1.0",
+  "description": "simple context management using JavaScript. It allows you to create contexts, bind values to keys within those contexts, and retrieve those values within a handler function.",
   "main": "index.js",
   "type": "module",
   "exports": {
@@ -20,7 +20,7 @@
     "benchmark": "node ./tests/benchmark.js",
     "prepare": "node scripts/build.js"
   },
-  "keywords": ["context-async-hooks" , "async-hooks", "context-manager" , "ctx", "ctxjs", "ctxjs-context-manager", "create-context", "Context Manager", "javascript" , "js", "context" , "javascript context manager", "nodejs", "async", "async hooks" , "context manager async hooks"],
+  "keywords": ["context-async-hooks" , "async-hooks", "context-manager" , "ctx", "create-context", "Context Manager", "javascript" , "js", "context" , "javascript context manager", "nodejs", "async", "async hooks" , "context manager async hooks", "context manager"],
   "author": "opium66",
   "license": "MIT"
 }

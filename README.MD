@@ -25,6 +25,9 @@ The main components of this example are:
    
    ```javascript
    const theContext = Context.createContext();
+   // OR ||
+   const theContext = Context.createContext(name: string, deleteAfter: boolean);
+   // delete after is true context will be deleted after the handler is done.
    ```
 
 
