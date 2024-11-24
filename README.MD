@@ -65,7 +65,12 @@ The main components of this example are:
     const anotherContext = Context.getContext(); // This will be undefined
     console.log('GLOBAL: anotherContext', anotherContext); // Outputs: undefined
     ```
-
+7. **Access To Value By Property**: Attempting to access the context globally will return undefined.
+    ```javascript
+    const context = Context.createContext(); 
+    context.bind('key1', 'value1'); 
+    console.log(context.getByProperty.key1);
+    ```
 
 
 ## Benchmark
